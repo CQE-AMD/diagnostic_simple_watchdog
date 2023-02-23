@@ -1,6 +1,7 @@
 # diagnostic_simple_watchdog
 
-This package provides a simple way to add diagnostics to a ROS node.
+This package provides a simple way to add diagnostics to a ROS node, by adding
+a watchdog to its topics.
 
 Currently, this package only supports ROS1 (noetic).
 
