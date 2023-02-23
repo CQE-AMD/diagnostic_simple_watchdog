@@ -7,7 +7,7 @@ Currently, this package only supports ROS1 (noetic).
 
 ## How to use
 
-See examples in (./launch)[./launch].
+See examples in [./launch](./launch).
 It is as simple as to load a couple of parameters and run the node.
 
 ## TODO
