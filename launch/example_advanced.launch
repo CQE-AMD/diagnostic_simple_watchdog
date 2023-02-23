@@ -1,0 +1,7 @@
+<launch>
+    <!-- see params/example_topic_rate_watchdog.yaml for details -->
+    <node name="topic_rate_watchdog" pkg="diagnostic_simple_watchdog" type="topic_rate_watchdog.py">
+        <rosparam command="load"
+            file="$(find diagnostic_simple_watchdog)/params/example_topic_rate_watchdog.yaml" />
+    </node>
+</launch>

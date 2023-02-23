@@ -1,0 +1,6 @@
+<launch>
+    <!-- this launches a node that checks for /odom and expects the output at 50Hz -->
+    <node name="topic_rate_watchdog" pkg="diagnostic_simple_watchdog" type="topic_rate_watchdog.py">
+        <param name="topics" type="yaml" value="[{topic: odom, rate: 50}]" />
+    </node>
+</launch>
