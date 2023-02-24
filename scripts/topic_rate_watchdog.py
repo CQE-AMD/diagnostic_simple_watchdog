@@ -91,6 +91,7 @@ class TopicRateWatchdog:
         self.param = param
         self.warn_tolerance = Tolerance(param.rate, param.warn_rate_ratio)
         self.error_tolerance = Tolerance(param.rate, param.error_rate_ratio)
+        self.param.topic = rospy.resolve_name(self.param.topic)
         if self.param.diag_name is None:
             self.param.diag_name = "topic_watchdog_" + self.param.topic
         if self.param.window_size is None:
