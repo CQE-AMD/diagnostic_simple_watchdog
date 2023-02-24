@@ -125,14 +125,14 @@ class TopicRateWatchdog:
             res_buf.message = "No new message received"
             return res_buf
 
-        rate, min_rate, max_rate, stdev, __ = stat
+        rate, min_dt, max_dt, stdev, __ = stat
 
         if res_buf.values is None:
             res_buf.values = []
         res_buf.values.append(diag_msg.KeyValue("rate", f"{rate:.4}"))
-        res_buf.values.append(diag_msg.KeyValue("min rate", f"{min_rate:.4}"))
-        res_buf.values.append(diag_msg.KeyValue("max rate", f"{max_rate:.4}"))
-        res_buf.values.append(diag_msg.KeyValue("standard deviation", f"{stdev:.4}"))
+        res_buf.values.append(diag_msg.KeyValue("min delta", f"{min_dt:.4}[s]"))
+        res_buf.values.append(diag_msg.KeyValue("max delta", f"{max_dt:.4}[s]"))
+        res_buf.values.append(diag_msg.KeyValue("standard deviation", f"{stdev:.4}[s]"))
 
         error_msg: typing.List[str] = []
         if rate < self.error_tolerance.min_rate:
