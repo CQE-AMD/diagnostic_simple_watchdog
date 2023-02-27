@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from __future__ import annotations
 
 import dataclasses
@@ -184,7 +183,3 @@ def main():
         msg.status = [wd.analyze() for wd in watchdogs]
         diag_publisher.publish(msg)
         rate.sleep()
-
-
-if __name__ == "__main__":
-    main()

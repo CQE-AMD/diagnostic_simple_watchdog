@@ -12,7 +12,7 @@ This is where this package comes into play - just by providing the necessary par
 
 ## How to use
 
-### [topic_rate_watchdog.py](./scripts/topic_rate_watchdog.py)
+### [topic_rate_watchdog](./scripts/topic_rate_watchdog)
 
 With the following launch file, you will make a watchdog that checks if `odom` is publishing at 50Hz, and publish to `/diagnostics` accordingly.
 

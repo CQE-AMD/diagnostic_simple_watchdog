@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(diagnostic_simple_watchdog)
 
+find_package(catkin REQUIRED COMPONENTS
+  rospy
+)
+
+catkin_python_setup()
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -26,20 +32,12 @@ catkin_package(
 
 # Mark executable scripts (Python etc.) for installation
 # in contrast to setup.py, you can choose the destination
-catkin_install_python(PROGRAMS
-  scripts/topic_rate_watchdog.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
 
 #############
 ## Testing ##
 #############
 
-## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_diagnostic_simple_watchdog.cpp)
-# if(TARGET ${PROJECT_NAME}-test)
-#   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
-# endif()
-
-## Add folders to be run by python nosetests
-# catkin_add_nosetests(test)
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(tests/test_node.launch)
+endif()
