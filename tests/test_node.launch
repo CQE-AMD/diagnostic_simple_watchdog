@@ -1,0 +1,5 @@
+<launch>
+    <rosparam command="load" file="$(dirname)/params/param.yaml" ns="test_node" />
+    <param name="test_module" value="test_node.py"/>
+    <test test-name="test_node" pkg="diagnostic_simple_watchdog" type="pytest_runner.py" />
+</launch>
