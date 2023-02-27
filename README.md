@@ -24,7 +24,7 @@ With the following launch file, you will make a watchdog that checks if `odom` i
 </launch>
 ```
 
-For more advanced usage, see examples in [./launch](./launch).
+For more advanced usage, see examples in [./launch](./launch) and [./params](./params).
 
 #### Topics
 
@@ -36,7 +36,7 @@ For more advanced usage, see examples in [./launch](./launch).
 ##### Published Topics
 
 - `/diagnostics` ([diagnostic_msgs/DiagnosticArray](https://docs.ros.org/en/api/diagnostic_msgs/html/msg/DiagnosticArray.html))
-  - The provided topics to be checked for.
+  - The status (healthiness) of the topic
 
 #### Parameters
 
