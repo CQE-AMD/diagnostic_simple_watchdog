@@ -1,0 +1,18 @@
+topics:
+  # the simplest configuration
+  - topic: odom
+    rate: 50
+
+  # the full-blown configuration
+  - topic: laserscan
+    rate: 10
+    diag_name: dummy_diag
+    hardware_id: lidar_1
+    warn_rate_ratio: 0.2
+    error_rate_ratio: 0.3
+    warn_sd: 0.2
+    error_sd: 0.3
+    filter_expr: "m.header.frame_id == 'lidar_1_frame'"
+    window_size: 10
+
+publish_rate: 1

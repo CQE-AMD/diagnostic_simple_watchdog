@@ -73,5 +73,5 @@ For more advanced usage, see examples in [./launch](./launch) and [./params](./p
 
 ## TODO
 
-- Add unit tests
+- Use Github actions for tests
 - More documentation
